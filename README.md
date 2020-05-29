@@ -1,4 +1,4 @@
-# plugin_giftcertificate_sfra
+# Plugin Gift Certificate - SFRA
 
 # Using this cartridge  allow you following:   
 - Creating gift certificate in SFRA  
