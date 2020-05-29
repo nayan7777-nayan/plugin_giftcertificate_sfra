@@ -1,0 +1,2 @@
+# plugin_giftcertificate_sfra
+# plugin_giftcertificate  Using this cartridge  allow you following:    Creating gift certificate in SFRA&lt;br />   Checking gift certificate balance&lt;br />   Using gift certificate as a payment method at checkout&lt;br />   Content:  Import the content asset kept inside site-import folder in your site manually which are applicable on gift certificate purchase form and checkout form section 
