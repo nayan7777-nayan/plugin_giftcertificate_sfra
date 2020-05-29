@@ -1,0 +1,69 @@
+<isdecorate template="common/layout/page">
+
+    <isinclude template="/components/modules" sf-toolkit="off" />
+
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets.js');
+        assets.addJs('/js/giftcert.js');
+        assets.addCss('/css/giftcert.css');
+    </isscript>
+
+    <h1 class="page-title"><isprint value="${Resource.msg('gift.cert.heading', 'giftcert', null)}" /> </h1>
+
+    <div class="container gift-certificate-main">
+        <div class="row justify-content-center equal-height">
+            <div class="col-sm-12 col-md-6 gift-details">
+                <iscontentasset aid="gift-details"/>
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <isinclude template="checkout/giftcert/giftCertificateNoDecorator" sf-toolkit="off" />
+            </div>
+        </div>
+
+        <div class="row equal-height mt-5 check-balance-section">
+            
+            <iscontentasset aid="gift-check-balance" />
+
+            <form method="post" class="suppress check-balance" action="${URLUtils.url('GiftCert-CheckBalance')}">
+                <fieldset>
+
+                <div class="form-group
+                        <isif condition="${!!pdict.giftCertForm.purchase.from.mandatory === true}">required</isif>">
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="giftcert_balance_giftCertID"
+                            data-missing-error="${Resource.msg('error.message.required','forms',null)}"
+                            aria-describedby="form-giftCertID-error"
+                            <isprint value=${pdict.giftCertForm.balance.giftCertID.attributes} encoding="off" />>
+                            <div class="invalid-feedback" id="form-giftCertID-error"></div>
+                            <div id="gift-balance-msg"></div>
+                    </div> 
+                    
+                   
+                    <button type="submit" class="btn btn-block btn-primary" id="CheckBalanceButton" value="${Resource.msg('global.checkbalance', 'giftcert', null)}">
+                        ${Resource.msg('global.checkbalance', 'giftcert', null)}
+                    </button>
+                  
+
+                    <isif condition="${pdict.ErrorMsg}">
+                        <div class="form-row error">
+                            <isprint value="${pdict.ErrorMsg}"/>
+                        </div>
+                    <iselseif condition="${pdict.GiftCertificate != null}">
+                        <div class="form-row error">
+                            ${Resource.msg('giftcertpurchase.balancealert', 'checkout', null)} <isprint value="${pdict.GiftCertificate.balance}"/>
+                        </div>
+                    </isif>
+
+                </fieldset>
+            </form>
+
+        </div>
+
+        <div class="row justify-content-center equal-height mt-1">
+            <iscontentasset aid="gift-additional-details" />
+        </div>
+
+    </div>
+</isdecorate>

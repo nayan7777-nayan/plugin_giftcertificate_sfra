@@ -1,0 +1,45 @@
+<div class="col-lg-7 product-card-footer">
+    
+    <div class="row">
+        <!---item price--->
+        <div class="col-4 line-item-price-${lineItem.UUID}">
+
+            <p class="line-item-price-info">${Resource.msg('label.each.item.price','cart',null)}</p>
+            <isset name="price" value="${lineItem.price.basePrice}" scope="page"/>
+            <div class="price">
+                <span>
+                    <span class="sales">
+                        <span class="value">
+                            <isprint value="${price}"/>
+                        </span>
+                    </span>
+                </span>
+            </div>
+        </div>
+
+        <!--- quantity --->
+        <div class="col-4 col-lg-3 line-item-quantity">
+            <div class="quantity-form">
+                <label class="line-item-pricing-info quantity-label" for="quantity-${lineItem.UUID}">${Resource.msg('field.selectquantity','cart',null)}</label> <br/>
+                <span>1</span>
+    
+        </div>
+
+    </div>
+
+        <!--- line item total price --->
+        <div class="col-4 line-item-total-price">
+            <p class="line-item-price-info">
+                ${Resource.msg('label.total.price','cart',null)}
+            </p>
+            <div class="item-total-${lineItem.UUID} price">
+                <div class="pricing line-item-total-price-amount item-total-${lineItem.UUID}"><isprint value="${lineItem.price.grossPrice}" /></div>
+            </div>
+        </div>
+
+        <!--- extra slot for spacing reasons due to large remove button --->
+        <div class="col-lg-1 hidden-md-down remove-line-item-lg"></div>
+    </div>
+
+
+</div>

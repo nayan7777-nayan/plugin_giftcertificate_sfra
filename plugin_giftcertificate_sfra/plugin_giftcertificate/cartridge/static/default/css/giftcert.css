@@ -1,0 +1,25 @@
+.gift-certificate-main {
+  margin-bottom: 1em; }
+  .gift-certificate-main .gift-details .content-asset {
+    background-color: #efefef; }
+  .gift-certificate-main .content-asset {
+    padding: 10px; }
+    @media (max-width: 991.98px) {
+      .gift-certificate-main .content-asset {
+        margin-bottom: 1em; } }
+    .gift-certificate-main .content-asset img {
+      margin: 1.66em 0; }
+    .gift-certificate-main .content-asset h2 {
+      font-size: 1.3em;
+      text-transform: uppercase; }
+  .gift-certificate-main .product-gift-certificate {
+    width: 100%; }
+    .gift-certificate-main .product-gift-certificate .form-group.required .form-control-label:before {
+      content: "*";
+      color: #c00; }
+  .gift-certificate-main .check-balance-section form {
+    padding: 10px; }
+  .gift-certificate-main #gift-balance-msg {
+    color: #008827; }
+    .gift-certificate-main #gift-balance-msg.red {
+      color: #c00; }

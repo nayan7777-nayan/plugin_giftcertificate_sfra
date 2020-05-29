@@ -1,0 +1,79 @@
+<isloop items="${giftCertificateItems}" var="giftCertificateItem">
+    <isset name="lineItem" value="${giftCertificateItem.lineItem}" scope="page" />
+    <div class="card uuid-${lineItem.UUID}">
+        <div class="card-body">
+            <div class="product-line-item" data-product-line-item="${lineItem.UUID}">
+                <div class="line-item-header">
+                    <!--- name and remove buttons --->
+                    <isinclude template="common/giftCertCard/giftCertCardHeader" />
+
+                    <isif condition="${!empty(showGiftPrice) && showGiftPrice}">
+                        <div class="remove-line-item">
+                            <button type="button" class="remove-btn remove-product btn btn-light" data-toggle="modal"
+                                    data-target="#removeProductModal" data-pid="${lineItem.id}"
+                                    data-name="${lineItem.lineItemText}"
+                                    data-action="${pdict.actionUrls.removeGiftCertificate}"
+                                    data-uuid="${lineItem.UUID}"
+                                    data-flag="1"
+                                    aria-label="${Resource.msgf('text.remove.line.item','cart', null, lineItem.productName)}">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    </isif>
+                </div>
+
+                <div class="product-line-item-details d-flex flex-row">
+                    <div class="item-image">
+                        <img class="product-image" alt="" src="${URLUtils.staticURL('/images/gift-card.jpg')}" />
+                    </div>
+
+                    <div class="item-attributes">
+                        <isinclude template="common/giftCertCard/giftCertAttributes" />
+                    </div>
+                </div>
+
+                <isif condition="${!empty(showGiftPrice) && showGiftPrice}"> 
+                
+                    <div><hr class="line-item-divider"></div>
+
+                    <div class="row align-items-start">
+                        <!--- item price --->
+                        <div class="col-4 line-item-unit-price">
+                            <p class="line-item-pricing-info">
+                                <span class="line-item-total-text unit-price-label">
+                                    ${Resource.msg('label.each.item.price','cart',null)}
+                                </span><br/>
+                                <div class="item-total-${lineItem.UUID} price">
+                                    <isprint value="${lineItem.price.grossPrice}" style="MONEY_LONG" />
+                                </div>
+                            </p>
+                        </div>
+
+                        <!--- quantity --->
+                        <div class="col-4 line-item-quantity justify-content-center flex">
+                            <p class="line-item-pricing-info">
+                                <span class="line-item-total-text qty-card-quantity-label">
+                                ${Resource.msg('field.selectquantity','cart',null)}
+                                </span><br/>
+                                <span class="pricing qty-card-quantity-count"><isprint value="${1}" formatter="##" /></span>
+                            </p>
+                        </div> 
+
+                        <!--- line item total price --->
+                        <div class="col-4 line-item-total-price justify-content-end">
+                            <p class="line-item-pricing-info">
+                                <span class="line-item-total-text line-item-total-price-label">
+                                    ${Resource.msg('label.total.price','cart',null)}
+                                </span>
+                            </p>
+                            <div class="item-total-${lineItem.UUID} price">
+                                <isprint value="${lineItem.price.grossPrice}" style="MONEY_LONG" />
+                            </div>
+                        </div>
+                    </div>
+
+                </isif>
+            </div>
+        </div>
+    </div>
+</isloop>

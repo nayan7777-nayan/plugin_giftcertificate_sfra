@@ -1,0 +1,17 @@
+{
+    "hooks": [
+        {
+            "name": "app.payment.processor.basic_gift_certificate",
+            "script": "./cartridge/scripts/hooks/payment/processor/basic_gift_certificate"
+        },
+        {
+            "name": "app.payment.form.processor.basic_gift_certificate",
+            "script": "./cartridge/scripts/hooks/payment/processor/basic_gift_certificate_processor"
+        },
+        {
+            "name": "app.minicart.form.calculateMiniCartTotal",
+            "script": "./cartridge/scripts/hooks/calculateMiniCartTotal"
+        }
+
+    ]
+}

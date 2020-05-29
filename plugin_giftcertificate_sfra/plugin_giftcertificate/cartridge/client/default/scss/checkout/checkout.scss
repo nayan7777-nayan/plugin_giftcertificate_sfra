@@ -1,0 +1,41 @@
+@import "baseCSS/checkout/checkout";
+
+// scss for gift certificate on checkut page
+.gift-cert-form {
+    .balance {
+        font-size: 0.8rem;
+
+        &.error{
+            color: $red;
+        }
+
+        @include media-breakpoint-down(sm) {
+            margin-bottom: .5rem;
+        }
+    }
+
+    @include media-breakpoint-up(sm) {
+        .gift-cert-buttons {
+            padding-top: 2rem;
+        }
+    }
+
+    .gift-cert-buttons {
+        .submit-giftCert {
+            margin-right: .5rem;
+        }
+    }
+
+    .gift-cert-used {
+        margin-top: .5rem; 
+    }
+
+    .giftcert-pi {
+        .message {
+            color: green;
+            font-size: 0.8rem;
+        }
+    }
+
+
+}

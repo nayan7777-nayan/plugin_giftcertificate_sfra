@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns="http://www.demandware.com/xml/impex/library/2006-10-31" library-id="RefArchSharedLibrary">
+  <content content-id="gift-additional-details">
+    <display-name xml:lang="x-default">Gift Certificate Additonal Details</display-name>
+    <description xml:lang="x-default">Gift Certificate Additional Details</description>
+    <online-flag>true</online-flag>
+    <searchable-flag>false</searchable-flag>
+    <custom-attributes>
+      <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div class=&quot;terms-of-use&quot;&gt;
+        &lt;p&gt;&lt;strong&gt;Terms Of Use&lt;/strong&gt;&lt;/p&gt;
+        &lt;ul&gt;
+        &lt;li&gt;You cannot purchase an online gift certificate with another gift certificate.&lt;/li&gt;
+        &lt;li&gt;If the amount of your online gift certificates does NOT cover the total order amount, you will need to pay the remainder of the purchase with a valid credit card.&lt;/li&gt;
+        &lt;li&gt;If the amount of your online gift certificates is for MORE than the total order amount, the balance will be stored with your Salesforce account for your next purchase using the same gift certificate code.&lt;/li&gt;
+        &lt;li&gt;If you have any additional questions, please contact our Customer Service team.&lt;/li&gt;
+        &lt;li&gt;Online gift certificates are non-transferable, non-refundable and are not redeemable for cash (except where required by state law).&lt;/li&gt;
+        &lt;li&gt;We cannot replace lost or stolen online gift certificates.&lt;/li&gt;
+        &lt;li&gt;We do not charge sales tax when you buy an online gift certificate because it is charged when the gift certificate is used. State tax may be added to all orders shipped to addresses in the states indicated here.&lt;/li&gt;
+        &lt;/ul&gt;&lt;/div&gt;</custom-attribute>
+      </custom-attributes>
+      <folder-links>
+        <classification-link folder-id="gift-certificates" />
+      </folder-links>
+    </content>
+  </library>

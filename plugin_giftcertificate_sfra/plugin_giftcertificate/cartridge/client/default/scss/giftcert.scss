@@ -1,0 +1,53 @@
+@import "~baseCSS/variables";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins/breakpoints";
+
+.gift-certificate-main {
+
+    margin-bottom: 1em;
+
+    .gift-details {
+        .content-asset {
+            background-color: #efefef;
+        }
+    }
+
+    .content-asset {
+        padding: 10px;
+
+        @include media-breakpoint-down(md) {
+            margin-bottom: 1em;
+        }
+
+        img {
+            margin: 1.66em 0;
+        }
+
+        h2 {
+            font-size: 1.3em;
+            text-transform: uppercase;
+        }
+    }
+
+    .product-gift-certificate{
+        width: 100%;
+
+        .form-group.required .form-control-label:before {
+            content: "*";
+            color: $red;
+        }
+    }
+
+    .check-balance-section {
+        form {
+            padding: 10px;
+        }
+    }
+
+    #gift-balance-msg {
+        color: $green;
+        &.red {
+            color: $red;
+        }
+    }
+}

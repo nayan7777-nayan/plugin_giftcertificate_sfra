@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns="http://www.demandware.com/xml/impex/library/2006-10-31" library-id="RefArchSharedLibrary">
+  <content content-id="gift-check-balance">
+    <display-name xml:lang="x-default">Gift Certificate Check Balance</display-name>
+    <description xml:lang="x-default">Gift Certificate Check Balance Pop-Up</description>
+    <online-flag>true</online-flag>
+    <searchable-flag>false</searchable-flag>
+    <custom-attributes>
+      <custom-attribute attribute-id="body" xml:lang="x-default">&lt;h2&gt;Check Balance of Existing Certificate&lt;/h2&gt;
+        &lt;div style=&quot;padding:20px 0;&quot;&gt;
+        To redeem a gift certificate, provide the card’s 16-digit number code on the billing page of the checkout process. To check the balance of your online gift certificate, enter the number below:&lt;/div&gt;</custom-attribute>
+      </custom-attributes>
+      <folder-links>
+        <classification-link folder-id="gift-certificates" />
+      </folder-links>
+    </content>
+  </library>

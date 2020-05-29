@@ -1,0 +1,9 @@
+<!--- Edit gift Certificate --->
+<div class="gift-card-edit">
+    <a href="${URLUtils.url('GiftCert-Edit', 'uuid', lineItem.UUID)}" class="edit"
+       data-toggle="modal" data-target="#editProductModal"
+       aria-label="${Resource.msgf('text.edit.line.item','cart', null, lineItem.lineItemText)}"
+       title="${Resource.msg('link.edit.item', 'cart',null)}">
+           ${Resource.msg('link.edit.item', 'cart', null)}
+    </a>
+</div>

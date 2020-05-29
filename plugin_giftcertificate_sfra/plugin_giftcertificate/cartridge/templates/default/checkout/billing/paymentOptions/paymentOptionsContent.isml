@@ -1,0 +1,9 @@
+<isloop items="${pdict.order.billing.payment.applicablePaymentMethods}" var="paymentOption">
+        <isif condition="${paymentOption.ID === 'CREDIT_CARD' && pdict.order.totalGrossPrice.value > gcPITotal}">
+            <isinclude template="checkout/billing/paymentOptions/creditCardContent" />
+        </isif>
+
+    <isif condition="${paymentOption.ID === 'GIFT_CERTIFICATE'}">
+        <isinclude template="checkout/billing/paymentOptions/giftCertificateContent" />
+    </isif>
+</isloop>

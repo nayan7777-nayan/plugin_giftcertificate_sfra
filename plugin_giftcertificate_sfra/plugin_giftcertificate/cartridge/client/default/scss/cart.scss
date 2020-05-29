@@ -1,0 +1,32 @@
+@import "baseCSS/cart";
+
+
+// css for gift certificate cart item
+.gift-certificate {
+    .gift-cert-delivery {
+        color: #990000;
+    }
+
+    .quantity-form {
+        .line-item-pricing-info{
+            margin-bottom: 0.5rem !important;
+        }
+
+        span{
+            padding-left: 20px;
+        }
+    }
+}
+
+// css for gift certificate edit form
+.product-gift-certificate{
+    h2 {
+        text-align: center;
+        margin-bottom: 25px;
+    }
+
+    .form-group.required .form-control-label:before {
+        content: "*";
+        color: $red;
+    }
+}

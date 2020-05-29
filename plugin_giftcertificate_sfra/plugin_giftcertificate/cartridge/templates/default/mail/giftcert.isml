@@ -1,0 +1,66 @@
+<iscontent type="text/html" charset="UTF-8" compact="true" />
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<subject>
+<isif condition="${!empty(pdict.MailSubject)}">${pdict.MailSubject}<iselse /></isif></subject>
+<html>
+<head>
+
+</head>
+
+<body>
+	<table width="100%" cellpadding="0" cellspacing="0">
+		<tr>
+			<td align="center" style="background: #e0e0e0; padding: 50px 0;">
+				<center>
+					<table
+						style="background: #ffffff; border: 1px solid #999999; width: 680px;">
+						<tr>
+							<td
+								style="font-size: 12px; font-family: arial; padding: 20px 10px; vertical-align: top;">
+
+								<isif condition="${empty(pdict.recipientName)}">
+								<h1
+									style="font-size: 20px; font-family: georgia; font-weight: normal;">${Resource.msg('giftcert.dearcustomer','giftcert',null)}</h1>
+								<iselse />
+								<h1
+									style="font-size: 20px; font-family: georgia; font-weight: normal;">${StringUtils.format(Resource.msg('giftcert.dear','giftcert',
+									null), pdict.recipientName)}</h1>
+								</isif>
+
+								<p>
+									<isif condition="${empty(pdict.senderName)}">
+									${Resource.msg('giftcert.someone','giftcert',null)} <iselse />
+									<isprint value="${pdict.senderName}" /> </isif>
+									${StringUtils.format(Resource.msg('giftcert.paysattention','giftcert',
+									null), pdict.amount)}<a href="${URLUtils.httpHome()}"> ${Resource.msg('giftcert.dwonlinestore','giftcert',null)}</a>${Resource.msg('giftcert.period','giftcert',null)}
+								</p> 
+								<isif condition="${!empty(pdict.message)}"> 
+								<isif condition="${empty(pdict.senderName)}">
+								  <p>${Resource.msg('giftcert.msgleftforyou','giftcert',null)}</p>
+								<iselse />
+								<p>
+									<isprint value="${pdict.senderName}" /> 
+									${Resource.msg('giftcert.msghasbeenleftforyou','giftcert',null)}
+								</p>
+								</isif>
+
+								<p>
+									<isprint value="${pdict.message}" />
+								</p>
+								</isif>
+
+								<p>
+									${Resource.msg('giftcert.toredeem','giftcert',null)} : 
+									<isprint value="${pdict.giftCertificateCode}" />
+								</p>
+
+							</td>
+						</tr>
+					</table>
+				</center>
+			</td>
+		</tr>
+	</table>
+
+</body>
+</html>

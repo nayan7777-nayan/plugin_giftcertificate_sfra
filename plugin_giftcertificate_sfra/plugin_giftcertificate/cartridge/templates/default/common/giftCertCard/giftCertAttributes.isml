@@ -1,0 +1,15 @@
+<p class="line-item-attributes gift-cert-delivery"> 
+    <isprint value="${Resource.msg('cart.giftcertdelivery', 'giftcert', null)}" />
+</p>
+<br/>
+<p class="line-item-attributes"> 
+    <isprint value="${'To : '}" encoding="off" /> 
+    <isprint value="${lineItem.recipientName}" />,
+    <isprint value="${lineItem.recipientEmail}" />
+</p> 
+<isif condition="${ lineItem.senderName != null }">
+    <p class="line-item-attributes"> 
+        <isprint value="${'From : '}" encoding="off" /> 
+        <isprint value="${lineItem.senderName}" />
+    </p> 
+</isif>

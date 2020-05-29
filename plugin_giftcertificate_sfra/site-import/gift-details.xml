@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns="http://www.demandware.com/xml/impex/library/2006-10-31" library-id="RefArchSharedLibrary">
+  <content content-id="gift-details">
+    <display-name xml:lang="x-default">Gift Certificate Details</display-name>
+    <description xml:lang="x-default">Gift Certificate Details</description>
+    <online-flag>true</online-flag>
+    <searchable-flag>false</searchable-flag>
+    <page-attributes>
+      <page-title xml:lang="x-default">Purchasing Gift Certificates</page-title>
+      <page-description xml:lang="x-default">Purchasing Gift Certificates</page-description>
+    </page-attributes>
+    <custom-attributes>
+      <custom-attribute attribute-id="body" xml:lang="x-default">&lt;h2&gt;Purchase an Online Gift Certificate&lt;/h2&gt;
+        
+        &lt;img height=&quot;162&quot; width=&quot;312&quot; src=&quot;images/gift-certificates.png?$staticlink$&quot; alt=&quot;&quot; /&gt;
+        
+        &lt;ul&gt;
+        &lt;li&gt;Delivered by email within hours&lt;/li&gt;
+        &lt;li&gt;Send as email&lt;/li&gt;
+        &lt;li&gt;Use online only&lt;/li&gt;
+        &lt;li&gt;Only redeemable in the country where purchased&lt;/li&gt;
+        &lt;/ul&gt;
+        
+        &lt;p&gt;&lt;strong&gt;Online Gift Certificate General Information&lt;/strong&gt;&lt;/p&gt;
+        &lt;p&gt;Online Gift Certificates can be ordered in any amount between $5.00 and $5000.00. They are sent via email to any individual with a valid email address. The recipient of an online gift certificate will receive an email with a gift certificate code redeemable only at Salesforce. The code is activated within 24 hours after receiving the email.&lt;/p&gt;</custom-attribute>
+      </custom-attributes>
+      <folder-links>
+        <classification-link folder-id="gift-certificates" />
+      </folder-links>
+    </content>
+  </library>

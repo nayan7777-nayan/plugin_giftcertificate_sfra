@@ -1,0 +1,111 @@
+<div class="product-gift-certificate">
+<isscript>
+        var assets = require('*/cartridge/scripts/assets.js');
+         assets.addJs('/js/cart.js');
+        assets.addCss('/css/cart.css');
+    </isscript>
+    <isif condition="${pdict.action == 'update'}">
+        <h2><isprint value="${Resource.msg('cart.edit.giftcert.heading','giftcert',null)}" /> </h2>
+    </isif>
+
+    <div class="error error-gift-certificate"></div>
+
+    <form action="${pdict.actionUrl}" class="giftcert" method="POST" name="giftcert-purchase-form">
+        <div class="form-group
+            <isif condition="${!!pdict.giftCertForm.purchase.from.mandatory === true}">required</isif>">
+            <label class="form-control-label" for="giftcert_purchase_from">
+                <isprint value="${pdict.giftCertForm.purchase.from.label}" encoding="htmlcontent" />
+            </label>
+            <input
+                type="text"
+                class="form-control"
+                id="giftcert_purchase_from"
+                data-missing-error="${Resource.msg('error.message.required','forms',null)}"
+                aria-describedby="form-from-error"
+                <isprint value=${pdict.giftCertForm.purchase.from.attributes} encoding="off" />>
+                <div class="invalid-feedback" id="form-from-error"></div>
+        </div>
+
+        <div class="form-group
+            <isif condition="${!!pdict.giftCertForm.purchase.recipient.mandatory === true}">required</isif>">
+            <label class="form-control-label" for="giftcert_purchase_recipient">
+                <isprint value="${pdict.giftCertForm.purchase.recipient.label}" encoding="htmlcontent" />
+            </label>
+            <input
+                type="text"
+                class="form-control"
+                id="giftcert_purchase_recipient"
+                data-missing-error="${Resource.msg('error.message.required','forms',null)}"
+                aria-describedby="form-recipient-error"
+                <isprint value=${pdict.giftCertForm.purchase.recipient.attributes} encoding="off" />>
+                <div class="invalid-feedback" id="form-recipient-error"></div>
+        </div>
+
+        <div class="form-group
+            <isif condition="${!!pdict.giftCertForm.purchase.recipientEmail.mandatory === true}">required</isif>">
+            <label class="form-control-label" for="giftcert_purchase_recipientEmail">
+                <isprint value="${pdict.giftCertForm.purchase.recipientEmail.label}" encoding="htmlcontent" />
+            </label>
+            <input
+                type="text"
+                class="form-control"
+                id="giftcert_purchase_recipientEmail"
+                data-missing-error="${Resource.msg('error.message.required','forms',null)}"
+                aria-describedby="form-recipientEmail-error"
+                <isprint value=${pdict.giftCertForm.purchase.recipientEmail.attributes} encoding="off" />>
+                <div class="invalid-feedback" id="form-recipientEmail-error"></div>
+        </div>
+
+        <div class="form-group
+            <isif condition="${!!pdict.giftCertForm.purchase.confirmRecipientEmail.mandatory === true}">required</isif>">
+            <label class="form-control-label" for="giftcert_purchase_confirmRecipientEmail">
+                <isprint value="${pdict.giftCertForm.purchase.confirmRecipientEmail.label}" encoding="htmlcontent" />
+            </label>
+            <input
+                type="text"
+                class="form-control"
+                id="giftcert_purchase_confirmRecipientEmail"
+                data-missing-error="${Resource.msg('error.message.required','forms',null)}"
+                aria-describedby="form-confirmRecipientEmail-error"
+                <isprint value=${pdict.giftCertForm.purchase.confirmRecipientEmail.attributes} encoding="off" />>
+                <div class="invalid-feedback" id="form-confirmRecipientEmail-error"></div>
+        </div>
+
+        <div class="form-group">
+            <label for="giftcert_purchase_message">
+                <isprint value="${pdict.giftCertForm.purchase.message.label}" encoding="htmlcontent" />
+            </label>
+            <textarea class="form-control" id="giftcert_purchase_message" rows="3"
+                <isprint value="${pdict.giftCertForm.purchase.message.attributes}" encoding="off" />
+            ><isprint value="${pdict.giftCertForm.purchase.message.value.trim()}" encoding="off" />
+            </textarea>
+        </div>
+
+        <div class="form-group
+            <isif condition="${!!pdict.giftCertForm.purchase.amount.mandatory === true}">required</isif>">
+            <label class="form-control-label" for="giftcert_purchase_amount">
+                <isprint value="${pdict.giftCertForm.purchase.amount.label}" encoding="htmlcontent" />
+            </label>
+            <input
+                type="text"
+                class="form-control"
+                id="giftcert_purchase_amount"
+                data-missing-error="${Resource.msg('error.message.required','forms',null)}"
+                aria-describedby="form-amount-error"
+                <isprint value=${pdict.giftCertForm.purchase.amount.attributes} encoding="off" />>
+                <div class="invalid-feedback" id="form-amount-error"></div>
+        </div>
+
+        <isif condition="${pdict.action == 'update'}">
+            <button type="submit" class="btn btn-block btn-primary update-gift-certificate">
+                ${Resource.msg('gitfcert.purchase.update','giftcert',null)}
+            </button>
+        <iselse/>
+            <button type="submit" class="btn btn-block btn-primary">
+                ${Resource.msg('gitfcert.purchase.submit','giftcert',null)}
+            </button>
+        </isif>
+
+        <input type="hidden" name="${pdict.csrf.tokenName}" value="${pdict.csrf.token}"/>
+    </form>
+</div>
