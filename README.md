@@ -12,3 +12,8 @@
 
 - Minicart total quantity count has changed on fly related change : Controller : cartridge\controllers\Cart.js
 - In Myaccount section orderhistory list has rendered with consolidated with product and gift certificate items : Models : \cartridge\models\order.js
+
+# Cartridge Path Considerations
+The plugin_giftcertificate plugin requires the app_storefront_base cartridge. In your cartridge path, include the cartridges in the following order:
+
+plugin_giftcertificate:app_storefront_base
