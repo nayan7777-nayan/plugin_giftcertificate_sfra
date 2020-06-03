@@ -8,6 +8,18 @@
 # Content:  
 - Import the content asset kept inside site-import folder in your site manually which are applicable on gift certificate purchase form and checkout form section 
 
+# Install Page Designer Cartridge
+
+- In the command prompt, navigate to the top level of the repository, for example, storefront-reference-architecture.
+- Enter this command: npm install
+- Repeat these steps for each repository. The npm client installs any packages a repository needs.
+- Compile the JavaScript and Style Sheets.
+
+       <code>a. Navigate to the top level of the repository.
+        b. Enter this command: npm run compile:js<br>
+        c. Enter this command: npm run compile:scss<br>
+        d. Enter this command: npm run compile:fonts</code>
+
 # Few changes in base custom cartridge :
 
 - Minicart total quantity count has changed on fly related change : Controller : cartridge\controllers\Cart.js
