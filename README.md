@@ -15,10 +15,14 @@
 - Repeat these steps for each repository. The npm client installs any packages a repository needs.
 - Compile the JavaScript and Style Sheets.
 
-       <code>a. Navigate to the top level of the repository.
-        b. Enter this command: npm run compile:js<br>
-        c. Enter this command: npm run compile:scss<br>
-        d. Enter this command: npm run compile:fonts</code>
+        a. Navigate to the top level of the repository.
+        
+        b. Enter this command: npm run compile:js
+        
+        c. Enter this command: npm run compile:scss
+        
+        d. Enter this command: npm run compile:fonts
+        
 
 # Few changes in base custom cartridge :
 
