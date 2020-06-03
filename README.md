@@ -11,7 +11,7 @@
 # Install Page Designer Cartridge
 
 - In the command prompt, navigate to the top level of the repository, for example, storefront-reference-architecture.
-- Enter this command: npm install
+- Enter this command: <b>npm install</b>
 - Repeat these steps for each repository. The npm client installs any packages a repository needs.
 - Compile the JavaScript and Style Sheets.
 
