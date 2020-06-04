@@ -26,8 +26,8 @@
 
 # Few changes in base custom cartridge :
 
-- Minicart total quantity count has changed on fly related change : Controller : cartridge\controllers\Cart.js
-- In Myaccount section orderhistory list has rendered with consolidated with product and gift certificate items : Models : \cartridge\models\order.js
+- When user will purchase the gift certificate and the product at the same time cart quantity count should update in minicart section related changes : Controller : cartridge\controllers\Cart.js
+- In Myaccount section orderhistory list should be rendered with product and gift certificate items, Such kinds of changes in this file : Models : \cartridge\models\order.js
 
 # Cartridge Path Considerations
 The plugin_giftcertificate plugin requires the app_storefront_base cartridge. In your cartridge path, include the cartridges in the following order:
