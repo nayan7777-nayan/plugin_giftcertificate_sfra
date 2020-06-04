@@ -32,4 +32,4 @@
 # Cartridge Path Considerations
 The plugin_giftcertificate plugin requires the app_storefront_base cartridge. In your cartridge path, include the cartridges in the following order:
 
-<code>plugin_giftcertificate:app_storefront_base</code>
+<code>plugin_giftcertificate:app_storefront_custom:app_storefront_base</code>
