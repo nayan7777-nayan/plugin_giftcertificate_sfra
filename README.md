@@ -8,7 +8,7 @@
 # Content:  
 - Import the content asset kept inside site-import folder in your site manually which are applicable on gift certificate purchase form and checkout form section 
 
-# Install Page Designer Cartridge
+# Install Custom Gift Certificate Cartridge
 
 - In the command prompt, navigate to the top level of the repository, for example, storefront-reference-architecture.
 - Enter this command: <b>npm install</b>
